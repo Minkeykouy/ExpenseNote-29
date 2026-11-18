@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6617CC"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- การ์ดหลัก -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/vivid_yellow_soft"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- หัวข้อแอป -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="บันทึกค่าใช้จ่ายประจำวัน"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="จดทุกบาทที่ใช้วันนี้ให้ครบเลยนะ"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="16dp"
+                android:gravity="center" />
+
+            <!-- ช่องกรอกจำนวนเงิน -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="โปรดใส่จำนวนเงิน (เป็นบาท)"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="เช่น 100 หรือ 10.25"
+                android:inputType="numberDecimal"
+                android:background="#6617CC"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#E0E0E0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- ช่องกรอกคำอธิบาย -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="คำอธิบาย"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="เช่น ข้าวกลางวัน, ค่าเดินทาง"
+                android:inputType="text"
+                android:background="#6617CC"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#E0E0E0"
+                android:layout_marginBottom="20dp" />
+
+            <!-- ปุ่มเคลียร์ และ เพิ่มรายการ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:text="เคลียร์"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#6617CC" />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="เพิ่มรายการ"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#6617CC" />
+            </LinearLayout>
+
+            <!-- เส้นคั่น -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#6617CC"
+                android:layout_marginBottom="16dp" />
+
+            <!-- สรุปรายการล่าสุด และ ยอดรวม -->
+            <TextView
+                android:id="@+id/tvLatestItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="รายการล่าสุด: -"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ยอดรวมวันนี้: 0.00 บาท"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:padding="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

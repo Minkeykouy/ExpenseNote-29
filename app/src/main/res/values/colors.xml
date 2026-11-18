@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Theme Deep Purple & Vibrant Yellow (เข้มๆ ดุดัน) -->
+    <color name="deep_purple_bg">#1D0C33</color>
+    <color name="deep_purple_card">#2D154B</color>
+    <color name="deep_purple_input">#3F1F69</color>
+    <color name="purple_text_sub">#D1C4E9</color>
+
+    <color name="vivid_yellow_primary">#FFC107</color>
+    <color name="vivid_yellow_bright">#FFD600</color>
+    <color name="vivid_yellow_soft">#FFE082</color>
+    <color name="vivid_yellow_bg">#FFF176</color>
+</resources>
